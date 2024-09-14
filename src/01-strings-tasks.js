@@ -215,8 +215,17 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(/* width, height */) {
-  // return '┌────┐' + '│' + '│';
-
+  // let result = '';
+  // for (let i = 0; i < height; i += 1) {
+  //   if (i === 0) {
+  //     result += '┌' + '-'.repeat(width) + '┐\n';
+  //   } else if (i === height - 1) {
+  //     result += '└' + '-'.repeat(width) + '┘\n';
+  //   } else {
+  //     result += '│' + '  '.repeat(width) + '│\n';
+  //   }
+  // }
+  // return result;
   throw new Error('Not implemented');
 }
 
@@ -287,8 +296,13 @@ function isString(value) {
  *   'Q♠' => 50
  *   'K♠' => 51
  */
-function getCardId(/* value */) {
-  throw new Error('Not implemented');
+function getCardId(value) {
+  const suits = ['♣', '♦', '♥', '♠'];
+  const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+  const suitIndex = suits.indexOf(value.slice(-1));
+  const rankIndex = ranks.indexOf(value.slice(0, value.length - 1));
+  return suitIndex * 13 + rankIndex;
+  // throw new Error('Not implemented');
 }
 
 

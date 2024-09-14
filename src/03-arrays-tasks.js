@@ -21,8 +21,13 @@
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 function findElement(/* arr, value */) {
+  // return arr.indexOf(value);
+  // eslint-disable-line no-unused-vars
+  // return arr.includes(value) ? arr.indexOf(value) : -1;
+  // eslint-disable-line no-unused-vars
   throw new Error('Not implemented');
 }
+
 
 /**
  * Generates an array of odd numbers of the specified length
@@ -36,6 +41,9 @@ function findElement(/* arr, value */) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(/* len */) {
+  // return Array(len).fill(0).map((_, i) => 2 * i + 1);
+  // eslint-disable-line no-unused-vars
+  // throw new Error('Not implemented');
   throw new Error('Not implemented');
 }
 
