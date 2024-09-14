@@ -216,11 +216,15 @@ function extractEmails(str) {
  */
 function getRectangleString(/* width, height */) {
   // let result = '';
+  // const topLeft = '┌';
+  // const topRight = '┐';
+  // const bottomLeft = '└';
+  // const bottomRight = '┘';
   // for (let i = 0; i < height; i += 1) {
   //   if (i === 0) {
-  //     result += '┌' + '-'.repeat(width) + '┐\n';
+  //     result += topLeft + '-'.repeat(width) + '┐\n';
   //   } else if (i === height - 1) {
-  //     result += '└' + '-'.repeat(width) + '┘\n';
+  //     result += bottomLeft + '-'.repeat(width) + '┘\n';
   //   } else {
   //     result += '│' + '  '.repeat(width) + '│\n';
   //   }
