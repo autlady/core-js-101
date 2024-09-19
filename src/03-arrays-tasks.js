@@ -640,10 +640,6 @@ function swapHeadAndTail(arr) {
   const a = arr.splice(0, f);
   const b = arr.splice(r - f);
   return b.concat(arr, a);
-  // const middleIndex = Math.floor(arr.length / 2);
-  // const head = arr.slice(0, middleIndex);
-  // const tail = arr.slice(middleIndex);
-  // return tail.concat(head);
   // throw new Error('Not implemented');
 }
 
