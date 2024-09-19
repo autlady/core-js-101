@@ -214,23 +214,27 @@ function extractEmails(str) {
  *             '└──────────┘\n'
  *
  */
-function getRectangleString(/* width, height */) {
-  // let result = '';
-  // const topLeft = '┌';
-  // const topRight = '┐';
-  // const bottomLeft = '└';
-  // const bottomRight = '┘';
-  // for (let i = 0; i < height; i += 1) {
-  //   if (i === 0) {
-  //     result += topLeft + '-'.repeat(width) + '┐\n';
-  //   } else if (i === height - 1) {
-  //     result += bottomLeft + '-'.repeat(width) + '┘\n';
-  //   } else {
-  //     result += '│' + '  '.repeat(width) + '│\n';
-  //   }
-  // }
-  // return result;
-  throw new Error('Not implemented');
+function getRectangleString(width, height) {
+  let result = '';
+  const topLeft = '┌';
+  const topRight = '┐\n';
+  const bottomLeft = '└';
+  const bottomRight = '┘\n';
+  const sideLeft = '│';
+  const sideRight = '│\n';
+  const side = '─';
+  const space = ' ';
+  for (let i = 0; i < height; i += 1) {
+    if (i === 0) {
+      result += topLeft + side.repeat(width - 2) + topRight;
+    } else if (i === height - 1) {
+      result += bottomLeft + side.repeat(width - 2) + bottomRight;
+    } else {
+      result += sideLeft + space.repeat(width - 2) + sideRight;
+    }
+  }
+  return result;
+  // throw new Error('Not implemented');
 }
 
 
