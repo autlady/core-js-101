@@ -162,10 +162,6 @@ function doRectanglesOverlap(rect1, rect2) {
  *
  */
 function isInsideCircle(/* circle, point */) {
-  // const dx = point.x - circle.center.x;
-  // const dy = point.y - circle.center.y;
-  // const distance = Math.sqrt(dx * dx + dy * dy);
-  // return distance <= circle.radius;
   throw new Error('Not implemented');
 }
 
@@ -225,8 +221,9 @@ function getIntervalString(/* a, b, isStartIncluded, isEndIncluded */) {
  * 'rotator' => 'rotator'
  * 'noon' => 'noon'
  */
-function reverseString(/* str */) {
-  throw new Error('Not implemented');
+function reverseString(str) {
+  return str.split('').reverse().join('');
+  // throw new Error('Not implemented');
 }
 
 
@@ -242,8 +239,9 @@ function reverseString(/* str */) {
  *   87354 => 45378
  *   34143 => 34143
  */
-function reverseInteger(/* num */) {
-  throw new Error('Not implemented');
+function reverseInteger(num) {
+  return num.toString().split('').reverse().join('');
+  // throw new Error('Not implemented');
 }
 
 
