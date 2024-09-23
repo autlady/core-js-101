@@ -311,8 +311,18 @@ function isCreditCardNumber(ccn) {
  *   10000 ( 1+0+0+0+0 = 1 ) => 1
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
-function getDigitalRoot(/* num */) {
-  throw new Error('Not implemented');
+function getDigitalRoot(num) {
+  let sum = 0;
+  let n = num;
+  while (n > 0) {
+    sum += n % 10;
+    n = Math.floor(n / 10);
+  }
+  if (sum > 9) {
+    return getDigitalRoot(sum);
+  }
+  return sum;
+  // throw new Error('Not implemented');
 }
 
 
@@ -337,8 +347,13 @@ function getDigitalRoot(/* num */) {
  *   '{)' = false
  *   '{[(<{[]}>)]}' = true
  */
-function isBracketsBalanced(/* str */) {
-  throw new Error('Not implemented');
+function isBracketsBalanced(str) {
+  let s = str;
+  while (s.includes('()') || s.includes('[]') || s.includes('{}') || s.includes('<>')) {
+    s = s.replaceAll('()', '').replaceAll('[]', '').replaceAll('{}', '').replaceAll('<>', '');
+  }
+  return !s;
+  // throw new Error('Not implemented');
 }
 
 
